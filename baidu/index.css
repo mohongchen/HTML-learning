@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover{
+    text-decoration:none; 
+    color: rgb(0, 0, 0)
+}
+#manner {
+    width: 960px;
+}
+div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.alink{
+    margin-right: 10px;
+}
+
+#search{
+    width: 400px;
+    height: 25px;
+    margin: 15px 0px;
+}
+button{
+    width: 100px;
+    height: 29px;
+}
+#link3{
+    margin-top: 300px;
+}
+#link4 .alink{
+    margin-left: 10px;
+}

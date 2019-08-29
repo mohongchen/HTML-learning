@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    height: 58px;
+    width: 120px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+}
+.one{
+    background: url(images/bg1.png) no-repeat
+}
+.two{
+    background: url(images/bg2.png) no-repeat
+}
+.three{
+    background: url(images/bg3.png) no-repeat
+}
+.four{
+    background: url(images/bg4.png) no-repeat
+}
+
+.one:hover{
+   background: url(images/bg4.png) 
+}
+.two:hover{
+    background: url(images/bg5.png) 
+ }
+ .three:hover{
+    background: url(images/bg6.png) 
+ }
+ .four:hover{
+    background: url(images/bg7.png) 
+ }

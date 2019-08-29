@@ -1,0 +1,29 @@
+浏览器内核：
+chrome  ：Chromium/Blink
+Firefox ：Gecko
+safari  ：Webkit
+edge    ：EdgeHTML
+IE      ：Trident
+opera   ：blink
+
+web标准
+由w3C 和其他标准化组织规定
+web标准的三层组成：
+主要包括结构、表现、和行为三个方面
+网页元素    外观样式    交互
+HTML        CSS      JavaScript
+
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+    </body>
+</html>
+
+分类：
+常规元素（双标签）：大多数
+空元素（单标签）：<img> <a> <br> <hr> <link>
+
+标签关系：父子级；并列级
+lang="zh-CN"

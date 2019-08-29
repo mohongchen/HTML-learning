@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0
+}
+#manner{
+    text-align: center;
+    margin: 0 auto;
+}
+#li{
+    width: 175px;
+    height: 259px;
+    display: inline-block;
+    background:url(imagse/li_bg.jpg) no-repeat;
+    font-size: 12px;
+    margin-right: 5px;
+}
+#head{
+    text-align: center
+}
+#li span{
+    height: 50px;
+    line-height: 50px
+}
