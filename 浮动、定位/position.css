@@ -1,0 +1,42 @@
+/* 定位 */
+.wrapper {
+    margin: 0 auto;
+    width: 1300px;
+    position: relative;
+}
+
+.left {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    background: #ff0
+}
+.right {
+    width: 200px;
+    height: 100px;
+    float: right;
+    background: #f00;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.con {
+    height: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #000;
+}
+
+.b {
+    width: 100%;
+    height: 50px;
+    background: #f0f;
+}
+
+.c {
+    width: 100%;
+    height: 50px;
+    background: #00f;
+}
+
