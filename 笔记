@@ -13,17 +13,15 @@ web标准的三层组成：
 网页元素    外观样式    交互
 HTML        CSS      JavaScript
 
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-    </body>
-</html>
-
 分类：
 常规元素（双标签）：大多数
-空元素（单标签）：<img> <a> <br> <hr> <link>
+空元素（单标签）：<img> <a> <br> <hr> <link> <base>
 
 标签关系：父子级；并列级
 lang="zh-CN"
+<base target="_blank">
+&nbsp;
+&lt;
+&gt;
+&copy;
+&reg;

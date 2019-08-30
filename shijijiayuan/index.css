@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+
+#manner{
+    
+    width: 600px;
+    margin: 0 auto;
+}
+#left{
+    float: left;
+}
+#right{
+    line-height: 40px;
+    float: left;
+}
+h1{
+    text-align: center;
+    font-size: 15px;
+    margin: 20px auto;
+}
+li{
+    height: 40px;
+    margin-right: 20px;
+}
+.clear{
+    list-style:none;
+}
+#textarea{
+    display: block;
+}
+.p input,a,span{
+    display: inline-block;
+    margin: 10px 0;
+}
+.p a{
+    text-decoration: underline;
+}
+
+#foot ul{
+    padding-left:  35px;
+}
+#foot ul li{
+    height: 20px;
+}
