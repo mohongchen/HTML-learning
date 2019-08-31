@@ -28,8 +28,9 @@ a {
 }
 
 a:hover {
-    color: #e33333;
+    color: #e33333!important;
 }
+
 
 button,
 input {

@@ -1,0 +1,152 @@
+.main{
+    height: 465px;
+}
+.main .dd ul{
+    width: 209px;
+    height: 465px;
+}
+.main .dd .menu_item{
+    display: inline-block;
+    height: 31px;
+    width: 188px;
+    padding: 0 10px;
+    line-height: 31px;
+    color: #fff;
+    background-color: #c81623;
+}
+.main .dd .menu_item:hover{
+    background-color: #fff;
+    color: #c81623;
+    padding-left: 20px;
+}
+.main .dd .menu_item:hover a{
+    color: #c81623;
+}
+.main .dd .menu_item:hover i{
+    font-size: 0;
+}
+.main .dd .menu_item a{
+    color: #fff;
+    font-size: 14px;
+}
+.main .dd .menu_item i{
+    float: right;
+}
+.focus {
+    position: relative;
+}
+.focus a img{
+    margin:  10px 0 0 10px;
+}
+.focus .arrow-l{
+    width: 24px;
+    height: 40px;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+}
+.focus .arrow-r{
+    width: 24px;
+    height: 40px;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 40px;
+}
+.focus .circle{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+}
+.focus .circle li{
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    float: left;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+}
+.focus .circle .current{
+    background-color: #fff;
+} 
+
+.newsflash{
+    width: 250px;
+    height: 455px;
+    margin-top: 10px;
+}
+.news{
+    border: 1px solid #ccc;
+}
+.newsflash .news_head{
+    width: 218px;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.newsflash .news_head a{
+    font-size: 12px;
+}
+.newsflash .news_body{
+    border-bottom: 1px solid #ccc;
+}
+.newsflash .news_body ul{
+    padding: 10px 0 10px 15px
+}
+.newsflash .news_body li{
+    height: 23px;
+    line-height: 23px;
+}
+.lifeservice{
+    width: 250px;
+    height: 210px;
+}
+.lifeservice ul li a{
+    display: block;
+    height: 67px;
+    float: left;
+    overflow: hidden;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.lifeservice ul li a i{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 10px 18px;
+    background: url(../images/icons.png) no-repeat;
+    background-position: -17px -16px;
+}
+.lifeservice ul li p{
+    display: block;
+    width: 61px;
+    text-align: center;
+}
+.clearBorderRight{
+    border-right: none !important;
+}
+.lifeservice span{
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 15px;
+    width: 12px;
+    background: url(../images/jian.jpg)no-repeat;
+}
