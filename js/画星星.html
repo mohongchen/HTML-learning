@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j <= i; j++) {
+            document.write("★");
+        }
+            document.write("<br>")
+        }
+        
+        document.write("<table style='border:1px solid; border-spacing: 5px;'>");
+        for (let i = 1; i<=9 ; i++) {
+            document.write("<tr>")
+            for( let j = 1;j <= i;j++){
+                document.write("<td>");
+                document.write(j+"*"+i+"="+i*j);
+                document.write("</td>");
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>");
+
+
+        //斐波那契数列
+
+        function feibo(num) {
+            let sum = 0;
+            if (num == 1) {
+                return 1;
+            }else{
+                let num1 = 1;
+                let num2 = 1;
+                sum = num1+num2;
+                for (let i = 3; i <= num; i++) {
+                    sum = num1+num2;
+                    num1 = num2;
+                    num2 = sum;
+                }
+                return sum;
+            }
+        }
+
+        console.log(feibo(24));
+    </script>
+</body>
+
+</html>

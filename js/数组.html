@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // //1.通过构造函数的方式定义一个数组
+        // var arr = nwe Array(); //没有数据，空数组
+        // console.log(arr);
+        // //如果用构造函数的方式创建数组的时候如果Array(这里只有一个数字)这个数字代表数组的长度
+        // var array = new Array(5);//五个undefine
+
+        // //通过字面量的方式
+        // var array1 = [];
+
+
+        //求数组中的所有元素的和
+
+        var arr1 = [10, 30, 0, 3, 20, 50, 40];
+        var sum = 0;
+        // for (let i  = 0; i   < arr1.length; i++) {
+        //     sum+=arr1[i];
+        // }
+        for (const i in arr1) {
+            sum += Number(arr1[i]);
+        }
+        console.log(sum);
+
+        //求数组中的元素的平均值
+
+        sum = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            sum += arr1[i];
+        }
+        var result = sum / (arr1.length);
+        console.log(result);
+
+        function Max(arr) {
+            let j = arr[0];
+            for (const i in arr) {
+                if (j < arr[i]) {
+                    j = arr[i];
+                }
+            }
+            return j;
+        }
+
+        function Min(arr) {
+            let j = arr[0];
+            for (const i in arr) {
+                if (j > arr[i]) {
+                    j = arr[i];
+                }
+            }
+            return j;
+        }
+
+        function daoxu(arr) {
+            for (let i = arr.length - 1; i >= 0; i--) {
+                console.log(arr[i]);
+            }
+        }
+        console.log(Max(arr1));
+        console.log(Min(arr1));
+        daoxu(arr1);
+        //用|将数组中的所有元素分割开并且用一个数组输出
+        function str(arr) {
+            var str = '';
+            for (let i = 0; i < arr.length - 1; i++) {
+                str += arr1[i] + '|';
+            }
+            return str + arr[arr.length - 1];
+        }
+        console.log(str(arr1));
+
+        //去除数组中所有的0
+
+        function remove0(arr) {
+            var newArr = [];
+            var count = 0;
+            for (const i in arr) {
+                if (arr[i] != 0) {
+                    newArr[count] = arr[i]
+                    count++;
+                }
+            }
+            return newArr;
+        }
+
+        console.log(remove0(arr1));
+
+        //反转数组
+        function fanzhuan(arr) {
+            var box = 0;
+            for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+                box = arr[i]; //先把第一个元素的值放到第三方变量中
+                arr[i] = arr[arr.length - 1 - i]; //把对应的后面的元素交换到前面；
+                arr[arr.length - 1 - i] = box;
+            }
+            return arr;
+        }
+        console.log(fanzhuan(arr1));
+
+        /**冒泡排序
+         * 需要比较length-1轮
+         * 每一轮需要比较length-轮数次
+         */
+        function maopao(arr) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                for (let j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var box = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = box;
+                    }
+                }
+
+            }
+            return arr;
+        }
+        console.log(maopao(arr1));
+
+        //返回数组中的素数
+        function isPrimeNumber(arr) {
+            let result = [];
+            for (const i in arr) {
+                let flag = true;
+                if (arr[i] == 0) {
+                    flag = false;
+                    continue;
+                }
+                for (let j = 2; j < Math.sqrt(arr[i]); j++) {
+                    if (arr[i] % j == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    result[result.length] = arr[i];
+                }
+            }
+            return result;
+        }
+        console.log(isPrimeNumber(arr1));
+    </script>
+</body>
+
+</html>

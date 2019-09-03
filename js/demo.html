@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>笔记</title>
+</head>
+
+<body>
+    <script>
+        //变量的交换
+        var num1 = 10;
+        var num2 = 20;
+
+        //把num1这个变量的值取出来放在temp变量中
+        // var temp = num1;
+        // num1 = num2;
+        // num2 = temp;
+        // console.log(num1);
+        // console.log(num2);
+
+
+
+        //第二种方式交换：一般适用于数字的交换
+        num1 = num1 + num2;
+        num2 = num1 - num2; //20
+        num1 = num1 - num2; //10
+
+        console.log(num1, num2);
+
+        var num1 = 10;
+        var num2 = 20;
+        num1 = num1 ^ num2;
+        num2 = num1 ^ num2;
+        num1 = num1 ^ num2;
+
+        //位运算 按位与
+
+        console.log(num1,num2);
+
+    </script>
+</body>
+
+</html>
