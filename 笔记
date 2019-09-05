@@ -25,3 +25,16 @@ lang="zh-CN"
 &gt;
 &copy;
 &reg;
+
+
+border-collapse: collapse; //相邻边框合并
+
+
+(function(){
+    console.log('立即执行函数');
+    
+})()
+
+预解析
+将变量的声明提到作用域的最前面;赋值不提前
+再将函数的声明提到作用域的最前面

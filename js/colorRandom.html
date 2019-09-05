@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .ranColor {
+            width: 100px;
+            height: 100px;
+            /* background-color: aqua; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="ranColor">
+
+    </div>
+    <script src="colorRandom.js"></script>
+    <script>
+        let colorR = new colorRandom();
+        let box = document.querySelector('.ranColor');
+        box.style.backgroundColor = colorR.getColor();
+        window.onload = function () {
+            let colorR = new colorRandom();
+            let box = document.querySelector('.ranColor');
+            box.style.backgroundColor = colorR.getColor();
+        }
+    </script>
+</body>
+
+</html>

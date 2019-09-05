@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+        //创建实例对象
+        // var dt =new Date( )
+        // console.log(dt);
+        // console.log(Date.now());
+
+        // var dt = new Date();
+        // //获取年份
+        // console.log(dt.getFullYear());
+        // //获取月份
+        // console.log(dt.getMonth()+1);//从零开始的；需要加1的
+        // //获取日期
+        // console.log(dt.getDate());
+        // //获取小时
+        // console.log(dt.getHours());
+        // //获取分钟
+        // console.log(dt.getMinutes());
+        // //获取秒
+        // console.log(dt.getSeconds());
+        // //获取星期
+        // console.log(dt.getDay());//0是星期日
+
+        // var dt = new Date();
+        // console.log(dt);
+        // //转换为字符串
+        // console.log(dt.toTimeString());//小时分钟秒
+        // console.log(dt.toLocaleDateString());//上午+小时分钟秒
+
+        // console.log(dt.valueOf());//毫秒值
+
+
+        //不支持h5的浏览器
+        // var dt = + new Date();  //通过调用date.valueOf()
+
+
+
+ 
+        function name(params) {
+            
+        }
+
+        /**用于获取日期
+         * @params: dt : Date对象
+         * @return {string} :一个日期的字符串
+         * */
+        function getDate(dt) {
+
+            var year = dt.getFullYear();
+            var month = dt.getMonth() + 1;
+            var day = dt.getDay();
+            var hour = dt.getHours();
+            var minute = dt.getMinutes();
+            var second = dt.getSeconds();
+
+            //把9分换成09
+            month = month < 10 ? "0" + month : month;
+            day = day < 10 ? "0" + day : day;
+            hour = hour < 10 ? "0" + hour : hour;
+            minute = minute < 10 ? "0" + minute : minute;
+            second = second < 10 ? "0" + second : second;
+            return year + '年' + month + '月' + day + '日' + hour + ':' + minute + ':' + second;
+        }
+
+        console.log(getDate(new Date()));
+    </script>
+</body>
+
+</html>

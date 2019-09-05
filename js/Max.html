@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var result = Math.max(10,20,30,40);
+        // console.log(result);
+            
+        //定义一个对象，实现max的方法
+
+        function MyMath() {
+            //添加一个方法
+            this.getMax=function(){                
+                var max = arguments[0];
+                for (const i in arguments) {
+                    if (max<arguments[i]) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            }
+            this.getMaxArr = function () {
+                var arr = arguments[0];
+                var max = arr[0];
+                for (const i in arr) {
+                    if (max < arr[i]) {
+                        max = arr[i];
+                    }
+                }
+                return max;
+            }
+        }
+        var mt = new MyMath();
+        var result = mt.getMaxArr([10,20,30,500,1,2,0]);
+        console.log(result);
+        
+    </script>
+</body>
+</html>

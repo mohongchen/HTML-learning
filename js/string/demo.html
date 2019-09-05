@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div>
+        <div class="cl"></div>
+    </div>
+
+    <script>
+        /**
+         * string----->字符串类型----基本类型
+         * String----->字符串类型----引用类型
+         * */
+
+        //字符串对象----String对象
+
+
+        //js中没有字符类型
+        //弱类型语言
+
+        //字符串可以看成是字符组成的数组；
+        //可以用for循环进行遍历
+        //字符串特性：不可变性，字符串的值是不能改变（不能通过索引的方式改变字符串的值）
+
+
+        // var str = '123456';
+        // console.log(str.length);
+
+
+        /**
+         * 实例方法------->必须要通过new的方式创建的对象（实例对象）来调用的方法
+         * 静态方法———————>直接通过大写的构造函数的名字调用的方法（直接通过大学的对象名字调用的（Math.））
+         * 
+         * */
+
+        /**
+         *.length 
+         *.charAt(index)
+         *String.fromCharCode(83,79,83)
+         *.concat(字符串1，字符串2，字符串3....);返回的是拼接后的新字符串
+         *.indexOf()
+         * .lastIndexOf()
+         * .replace('原来的字符串','新的字符串')用来替换新的字符串，只会替换第一个找到的字符串
+         * .slice('开始的索引',结束的索引) 结束可以省略；原来字符串不会改变
+         * .split('',num)将字符串用“字符”分开存入一个数组中；留下num个
+         * .substr('开始的位置','长度')返回的是截取后的新的字符串
+         * .substring('开始的索引','结束的索引')返回截取后的字符串，不包含结束的索引
+         * .toLowerCase()/.toLocaleLowerCase()变小
+         * .toUpperCase()/.toLocaleUpperCase()变大
+         * .trim()去掉字符串两端的空格
+         * */
+        // var str = 'whatareyounongshalei'
+        // console.log(str.charAt(0));
+        // console.log(String.fromCharCode(83, 79, 83)); //将ASCII码转换成字母
+        // str.indexOf('n',0);//找到字符串中传入的字符串的索引值，从第二个变量开始可省略，如果没找到返回-1
+        // str.lastIndexOf('n',0)//从后往前找
+
+        // var str = '善者不来，来者不善';
+        // str = str.slice(5,10);
+        // console.log(str);
+        // var str = '耀哥|伟哥|姚益';
+        // console.log(str.split('|',2));
+        // console.log(str.substr(0,5));
+        // console.log(str.substring(5,7));
+        // var str = 'HELLO';
+        // console.log(str.toLowerCase());
+        // console.log(str.toLocaleLowerCase());
+        // var str1 = 'hello';
+        // console.log(str.toUpperCase());
+        // console.log(str.toLocaleUpperCase());
+        var str = ' 你 打 字 带 空 格 '
+        console.log(str.trim());
+        
+        
+    </script>
+</body>
+
+</html>
