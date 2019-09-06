@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.jumodiary.com">推荐一个搜书网站鸠摩搜书</a>
+    <input type="button" value="显示" id="btn">
+    <br>
+    <img src="" alt="" id="im">
+    <br>
+    <input type="button" value="改变内容" id="btn-p">
+    <p id="p1">苟利国家生死以</p>
+    <input type="button" value="改变内容" id="btn-a">
+    <a href="#" id="a1">百度</a>
+    <br>
+    <input type="button" value="一起改变" id="btnS">
+    <br>
+    <div id="di">
+        <span>四个月</span>
+        <span>四个月</span>
+        <span>四个月</span>
+        <span>四个月</span>
+        <span>四个月</span>
+        <span>四个月</span>
+    </div>
+    
+    <script>
+        var btn = document.getElementById('btn');
+        var img = document.getElementById('im');
+        var btnP = document.getElementById('btn-p');
+        var p1 = document.getElementById('p1');
+        var btnA = document.getElementById('btn-a');
+        var a1 = document.getElementById('a1');
+        
+        var di = document.getElementById('di');
+        var spanArr = di.getElementsByTagName('span');
+        
+        function show() {
+            img.src = 'images/bj01.jpg';
+            btn.value = '隐藏';
+            btn.onclick = hidden;
+        }
+        function hidden() {
+            img.src = '';
+            btn.value = '显示';
+            btn.onclick = show;
+        }
+        btn.onclick = show;
+
+        //凡是成对的标签改变内容都用innerText这个属性的方式
+        btnP.onclick = function () {
+            p1.innerText = '命⑧要了';
+        }
+        
+        btnA.onclick = function () {
+            a1.href = 'https://www.bilibili.com';
+            a1.innerText = '哔哩哔哩';
+        }
+
+        btnS.onclick = function () {
+            for (const i in spanArr) {
+                spanArr[i].innerText = '全部学完';
+            }
+        }
+        
+    </script>
+</body>
+</html>
