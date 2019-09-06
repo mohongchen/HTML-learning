@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="选择兴趣" id="btn2">
+    <input type="checkbox" name="xingqu" id="">吃饭
+    <input type="checkbox" name="xingqu" id="">睡觉
+    <input type="checkbox" name="xingqu" id="">打豆豆
+    <input type="checkbox" name="xingqu" id="">打篮球
+    <input type="checkbox" name="xingqu" id="">打足球
+    <input type="checkbox" name="xingqu" id="">打铅球
+
+    <script>
+        //在表单标签中，如果属性和值都只有一个，且值是这个属性本身，
+        //那么在js代码，DOM操作的时候，这个属性值，是布尔类型就可以了(true/false)
+    
+        var btn2 = document.getElementById('btn2');
+        var check = document.getElementsByTagName('input');
+
+        btn2.onclick = function () {
+            check[3].checked = true;
+            check[4].checked = true;
+        }
+    </script>
+</body>
+</html>

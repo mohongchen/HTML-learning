@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="images/bj01.jpg" alt="">
+    <img src="images/bj02.jpg" alt="">
+    <img src="images/bj03.jpg" alt="">
+    <img src="images/bj04.jpg" alt="">
+    <img src="images/bj05.jpg" alt="">
+
+    <script>
+        var im = document.getElementsByTagName('img');
+
+        for (const i in im) {
+            im[i].onclick = function () {
+                alert('被点了')
+            }
+        }
+    </script>
+</body>
+
+</html>

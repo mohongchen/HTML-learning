@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //点击超链接弹出对话框
+    //阻止超链接的默认的跳转：return false
+    </script>
+    <a href="http://www.baidu.com" id="lin">百度</a>
+
+    <script>
+        var link = document.getElementById('lin');
+
+        link.onclick = function () {
+            alert('嘿嘿嘿');
+            return false;
+        }
+    </script>
+</body>
+</html>

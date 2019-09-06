@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            height: 20px;
+            width: 50px;
+            background-color: brown;
+        }
+
+        .click {
+            background-color: aqua;
+        }
+
+        .unclick {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="" class="unclick">
+    <input type="button" value="" class="unclick">
+    <input type="button" value="" class="unclick">
+    <input type="button" value="" class="unclick">
+    <input type="button" value="" class="unclick">
+
+    <script>
+        var button = document.getElementsByTagName('input');
+
+        
+        for (const i in button) {
+            button[i].onclick = function () {
+                for (const j in button) {
+                    button[j].className = 'unclick'
+                }
+                this.className = 'click'
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+/*清除默认样式*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+input,
+button {
+    border: 0;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    background-color: #f3f5f7
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 中央容器 */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部 */
+.header {
+    height: 42px;
+    margin: 30px 0;
+}
+
+/* 隐藏h1的文字 */
+.header h1 {
+    text-indent: -9999px;
+    overflow: hidden;
+    font-size: 0px;
+}
+
+.header .wrapper {
+    padding: 0 10px;
+}
+
+/* 导航 */
+.header .wrapper .nav {
+    margin: 0 60px;
+}
+
+.header .wrapper .nav li {
+    float: left;
+    margin-right: 20px;
+}
+
+.header .wrapper .nav li a {
+    display: block;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+.header .wrapper .nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+/* 搜索 */
+.header .search input {
+    float: left;
+    width: 358px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    text-indent: 20px;
+    color: #ccc;
+}
+
+.header .search button {
+    float: left;
+    height: 42px;
+    width: 50px;
+    background: url(images/btn.png);
+    border: 1px solid #00a4ff;
+    cursor: pointer;
+}
+
+.user {
+    margin-left: 30px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+
+}
+
+.user img {
+    vertical-align: middle;
+}
+

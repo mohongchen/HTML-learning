@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="tt" cols="30" rows="10" readonly>
+        注册协议
+    </textarea>
+    <input type="checkbox" name="" id="agree" >同意
+    <input type="button" value="注册" id="btn1" disabled>
+
+    <script>
+        var tt = document.getElementById('tt');
+        var agree = document.getElementById('agree');
+        var btn1 = document.getElementById('btn1');
+        
+        agree.onclick = function () {
+            if (this.checked) {
+                btn1.disable = false;
+            }
+        }
+    </script>
+</body>
+</html>

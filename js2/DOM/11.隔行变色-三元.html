@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    li {
+        height: 20px;
+    }
+</style>
+
+<body>
+    <input type="button" value="隔行变色" id="btn">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <script>
+        var btn = document.getElementById('btn');
+
+        var li = document.getElementsByTagName('li');
+
+        btn.onclick = function () {
+            for (const i in li) {
+                if (i == 'length') {
+                    break;
+                }
+                //实际上i的值在后面会变成length所以会报错 反而用for循环比较好,而且i是string类型的
+                li[i].style.backgroundColor = i % 2 == 0 ? '#f00' : '#f0f';
+            }
+        }
+    </script>
+</body>
+
+</html>

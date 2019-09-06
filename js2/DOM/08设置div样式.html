@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #f0f;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="设置样式" id="btn">
+    <input type="button" value="隐藏" id="btn1">
+    <div id="dv">
+
+    </div>
+    
+    <script>
+        var dv = document.getElementById('dv');
+        var btn = document.getElementById('btn');
+        var btn1 = document.getElementById('btn1');
+        
+        btn.onclick = function () {
+            dv.style.backgroundColor = '#f00';
+            dv.style.width = '500px';
+        }
+
+        btn1.onclick = function () {
+            if (this.value == '隐藏') {
+                this.value = '显示';
+                dv.style.display= 'none';
+            }else if(this.value == '显示') {
+                this.value = '隐藏';
+                dv.style.display= 'block';
+            } 
+        }
+    
+    </script>
+</body>
+</html>
