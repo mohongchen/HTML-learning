@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            border: 2px solid #f00;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="设置值" id="btn">
+    <div id="dv">
+
+    </div>
+
+    <script>
+        //textContent&innerText
+
+        //innerText 能获取标签中的文本的内容 但是标签的子集里面的文本内容也能获取到
+        //innerHTML 能获取标签中的所有内容(包括标签)
+        var btn = document.getElementById('btn');
+        var dv = document.getElementById('dv');
+
+        //当浏览器不支持某个属性时 这个属性的类型是undefined
+        function setText(element,text) {
+            if (typeof element.textContent != 'undefined') {
+                element.textContent = text;
+            }else{
+                element.innerText = text;
+            }
+        }
+        function getText(element) {
+            if (typeof element.textContent != 'undefined') {
+                return element.textContent;
+            }else{
+                return element.innerText;
+            }
+        }
+        btn.onclick = function () {
+            setText(dv,'哦豁');
+        }
+    </script>
+</body>
+</html>

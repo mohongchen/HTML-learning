@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+            height: 20px;
+            width: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="清除自定义属性" id = 'clear'>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <script>
+        //在html标签中添加的自定义属性，如果想要获取这个属性的值，需要使用getAttribute(‘自定义属性的名字)
+        //
+        var liList = document.getElementsByTagName('li');
+        for (var i = 0; i < liList.length; i++) {
+            //这种方式添加的属性，自定义属性在DOM对象上，不在标签中
+            //liList[i].score = (i+1)*10;
+            liList[i].setAttribute("score", (i + 1) * 10);
+            liList[i].onclick = function () {
+                alert(this.getAttribute('score'));
+            }
+        }
+
+        var clear= document.querySelector('#clear');
+
+        //removeAttribute也可以一次元素自带是属性
+        clear.onclick = function () {
+            for (const i in liList) {
+                //这种一律不要用forin    obj[];
+            liList[i].removeAttribute('score')
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
