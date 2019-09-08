@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+
+    <script src="common.js"></script>
+    <script>
+        
+        /**
+         * addEventListener()
+         * attachEvent()
+         * 不同点：
+         * 1.参数个数不一样
+         * 3.addEventListener() 谷歌火狐IE11支持 IE8不支持
+         * attachEvent() 谷歌火狐IE11不支持 IE8支持
+         * this的指向不同    addEventListener()里的this是绑定事件的对象
+         *                  attachEvent()中的this是window
+         * addEventListener()中的事件类型(事件的名字)没有on
+         * attachEvent()中的事件的类型(事件的名字)有on
+         * */
+        // addEvent(my$('btn'),'click',function () {
+        //     console.log('嘿嘿嘿');
+        // })
+        var btn = my$('btn');
+        btn.addEventListener('click',function () {
+            console.log(this);
+            //btn
+        },false);
+        btn.attachEvent('onclick',function () {
+            console.log('this:'+this);  
+            //window
+        });
+        
+    </script>
+</body>
+</html>

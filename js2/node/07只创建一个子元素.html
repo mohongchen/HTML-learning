@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        height: 200px;
+        width: 100px;
+        border: 2px solid paleturquoise;
+    }
+</style>
+
+<body>
+    <input type="button" value="创建" id="btn">
+    <!-- <input type="button" value="干掉第一个子元素" id="btn2">
+    <input type="button" value="删掉所有子元素" id="btn3"> -->
+    <div id="dv"></div>
+
+    <script>
+        var dv = document.getElementById('dv');
+        var btn = document.getElementById('btn');
+
+        //先删除再创建
+        // btn.onclick = function () {
+        //     var btn2 = document.getElementById('btn2');
+        //     if (btn2) {
+        //         dv.removeChild(btn2);
+        //     }
+        //     var obj = document.createElement('input');
+        //     obj.type = 'button';
+        //     obj.value = '按钮';
+        //     obj.id = 'btn2';
+        //     dv.appendChild(obj);
+        // }
+
+        //先创建再删除
+        btn.onclick = function () {
+            var btn2 = document.getElementById('btn2');
+            var obj = document.createElement('input');
+            obj.type = 'button';
+            obj.value = '按钮';
+            obj.id = 'btn2';
+            if (!btn2) {
+                dv.appendChild(obj);
+            }
+        }
+        //这样就无论点多少次都只创建了一次；但是实际上在内存空间里面还是会创建对象;
+    </script>
+</body>
+
+</html>

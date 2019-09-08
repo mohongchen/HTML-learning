@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //window可以省略
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                alert('哦豁')
+            };
+        }
+        
+        window.onunload = function () {
+            alert('嗯哼')
+        }
+        //IE8 不用记 页面关闭前才会加载的事件
+        window.onbeforeunload = function () {
+            alert('关闭前触发')
+        }
+
+
+    </script>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 没啥用知道就行 -->
+    <input type="button" value="跳过去" id="btn1">
+    <input type="button" value="前进" id="btn2">
+
+
+    <script src="common.js"></script>
+    <script>
+        my$('btn1').onclick = function () {
+            window.location.href = '05test.html'
+        };
+        my$('btn2').onclick = function () {
+            window.history.forward();
+        }
+        // window.history.go()
+        // go方法里面的参数是正则前进负则后退
+    </script>
+</body>
+</html>

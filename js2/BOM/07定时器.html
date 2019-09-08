@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn">
+    <script>
+        /**
+         * 定时器
+         * 参数1:函数
+         * 参数2:时间----毫秒
+         * 每隔参数2的时间后执行一次函数
+         * 
+         * 
+         * 
+         * 
+         * 
+         * */
+        var timeId = setInterval(function () {
+            alert('嘿嘿');
+        },1000)
+        document.getElementById('btn').onclick = function () {
+            window.clearInterval(timeId);
+        }
+    </script>
+</body>
+
+</html>

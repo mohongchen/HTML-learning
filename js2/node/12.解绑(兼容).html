@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="绑定" id="btn">
+    <input type="button" value="解绑" id="btn2">
+
+    <script src="common.js"></script>
+
+    <script>
+        var btn = my$('btn');
+        var btn2 = my$('btn2');
+
+        
+
+        function f1() {
+            console.log('嘿嘿嘿1');           
+        };
+        function f2() {
+        console.log('嘿嘿嘿2');
+        };
+
+        function re() {
+            removeEvent(btn,'click',f2)
+        }
+        addEvent(btn,'click',f1);
+        addEvent(btn,'click',f2);
+        //这里的第三个参数不能写removeEvent(btn,'click',f2) 道理是一样的只能写函数名不能加括号 不然会直接调用
+        addEvent(btn2,'click',re);
+    
+    </script>
+</body>
+</html>

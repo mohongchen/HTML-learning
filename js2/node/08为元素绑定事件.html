@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <input type="button" value="按钮2" id="btn2">
+
+    <script>
+        //为元素绑定事件：
+        
+        //为按钮绑定事件
+        var btn = document.getElementById('btn');
+        //参数1：事件的类型---事件的名字，没有on
+        //参数2：事件的处理函数---函数(命名函数，匿名函数);
+        //参数3：布尔类型 false
+        btn.addEventListener('click',function () {
+            console.log('姚益好猥琐啊');
+            console.log('大母鹅和小锯鳄说的');
+        },false);
+        btn.addEventListener('click',function () {
+        console.log('姚益好邪恶啊');
+        console.log('大母鹅和小锯鳄说的');
+        },false);
+        btn.addEventListener('click',function () {
+        console.log('姚益好下牛啊');
+        console.log('大母鹅和小锯鳄说的');
+        },false);
+
+        //IE8不支持
+        //所以用attachEvent 只有IE8支持；火狐和chrome不支持
+        //参数1：事件的类型---事件的名字，没有on
+        //参数2：事件的处理函数---函数(命名函数，匿名函数);
+        var btn2 = document.getElementById('btn2');
+        btn2.attachEvent('click',function () {
+            console.log('大母鹅和小锯鳄说的1');
+        });
+        btn2.attachEvent('click',function () {
+        console.log('大母鹅和小锯鳄说的2');
+        });
+        btn2.attachEvent('click',function () {
+        console.log('大母鹅和小锯鳄说的3');
+        })
+    </script>
+</body>
+</html>

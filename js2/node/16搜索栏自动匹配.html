@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 450px;
+            margin: 200px auto;
+        }
+
+        #txt {
+            width: 350px;
+        }
+
+        #pop {
+            width: 350px;
+            border: 1px solid red;
+        }
+
+        #pop p {
+            padding: 5px;
+            width: 340px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+        <input type="text" id="txt" value="">
+        <input type="button" value="搜索" id="btn">
+
+    </div>
+
+    <script src="common.js"></script>
+    <script>
+        var keyWords = ["妖精还我爷爷", "伟哥", "耀哥", "快闪开我按错了", "免费的都接着葱一分算我输", "桃饱网会员", "苹果好吃", "苹果此次召回还是没有中国"];
+        var txt = document.getElementById('txt');
+
+
+
+        txt.onkeyup = function () {
+            var text = txt.value;
+            var tempArr = []; //空数组---临时存放对应上的数据
+            
+            //先删除div
+            if (my$('pop')) {
+                my$('box').removeChild(my$('pop'));
+            }
+            
+            //把文本框输入的内容和数组中的每个数据对比
+            for (let i = 0; i < keyWords.length; i++) {
+                //是否是最开始出现的 
+                if (keyWords[i].indexOf(text) == 0) {
+                    tempArr.push(keyWords[i]);
+                }
+            }
+            //如果文本框里面没内容或者内容不匹配删除掉div 但是删除掉一个div后如果是之前匹配但是删除掉相关文字后会留下两个div
+            //只要文本框里面没内容或者内容不匹配就直接停止整个函数
+            if (this.value.length == 0 || tempArr.length == 0) {
+                if (my$('pop')) {
+                    my$('box').removeChild(my$('pop'));
+                    //注意 return不能写在这里 因为第一次进来时还没有创建div 那么这里的if进不来 return就不会执行
+                    // return;
+                }
+                return;
+            }
+            //创建div并且加到box里面
+            var pop = document.createElement('div');
+            pop.id = 'pop';
+            my$('box').appendChild(pop);
+            for (let i = 0; i < tempArr.length; i++) {
+                var pObj = document.createElement('p');
+                pop.appendChild(pObj);
+                pObj.innerText = tempArr[i];
+                pObj.onmouseover = function () {
+                    this.style.backgroundColor = 'yellow';
+                }
+                pObj.onmouseout = function () {
+                    this.style.backgroundColor = '#fff';
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

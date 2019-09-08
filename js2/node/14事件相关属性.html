@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 500px;
+            height: 500px;
+            background-color: #f00;
+        }
+
+        #div2 {
+            width: 300px;
+            height: 300px;
+            background-color: #0f0;
+        }
+
+        #div3 {
+            width: 100px;
+            height: 100px;
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3"></div>
+        </div>
+    </div>
+
+
+    <script src="common.js"></script>
+    <script>
+        /**
+         *1.事件捕获阶段:从外向内
+         *2.事件目标阶段
+         *3.事件冒泡阶段:从里向外
+         *该属性在事件参数对象中存在
+         *
+         *为元素绑定事件
+         *addEventListener('没有on的事件类型',事件处理函数,控制事件阶段的))
+         *window.envent.cancelBubble = true ;谷歌IE8支持,火狐不支持
+         *e.stopPropagation();阻止事件冒泡
+         *window.envent和e都是事件参数对象,一个是IE标准,一个是火狐的标准
+         *事件参数e在IE8的浏览器中不存在，用window.envent代替
+         *addEventListener中的第三个参数是控制事件阶段的
+         *e.eventPhase这个属性可以知道事件是哪个阶段的
+         */
+        
+        
+        //同时注册点击事件
+        var objs = [my$('div1'),my$('div2'),my$('div3')];
+        // for (const i in objs) {
+        //     console.log(i);
+        // }
+        
+        objs.forEach(function (ele) {
+            ele.addEventListener('click',function (e) {
+                console.log(this.id+'=======>'+e.eventPhase);
+            },true);//true 则有捕获没有冒泡
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn">
+    <input type="button" value="按钮2" id="btn2">
+
+    <script>
+        function addEvent(element, type, fn) {
+            if (element.addEventListener) {
+                element.addEventListener(type, fn, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + type, fn);
+            } else {
+                element['on'+type] = fn;
+            }
+        }
+
+        var btn = document.getElementById('btn');
+        addEvent(btn,'click',function () {
+            console.log('嘿嘿嘿1');
+        });
+        addEvent(btn,'click',function () {
+        console.log('嘿嘿嘿2');
+        });
+        addEvent(btn,'click',function () {
+        console.log('嘿嘿嘿3');
+        });
+
+    </script>
+</body>
+
+</html>
