@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            margin-bottom: 10px;
+            background-color: aqua;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="展示" id="btn1">
+    <input type="button" value="设置内容" id="btn2">
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <!-- 引入 -->
+    <script src="jquery-1.12.4.js"></script>
+    <!-- 入口函数 -->
+    <script>
+        /**1.链式操作
+         * 2.兼容大多数浏览器
+         * 3.注册的事件不会覆盖
+         * 4.封装有许多函数如动画函数
+         * 5.目前IE8还有6%左右的市场份额在用，所以用jquery1.12.4兼容ie
+         * */
+        //认识就行
+        $(document).ready(function () {
+            //注册事件
+            //选择器与querySelector差不多
+            $('#btn1').click(function () {
+                $('div').show(1000);
+            });
+            $('#btn2').click(function () {
+                //隐式迭代，自动遍历
+                $('div').text('我是内容');
+            });
+        });
+
+        window.onload = function () {
+            console.log('js的入口函数会比jq的入口函数晚无关代码书写顺序');
+            console.log('而且js的入口函数会等所有资源全部加载完成后才会执行');
+            console.log('但是jq的入口函数只会等待文档加载完成');
+        }
+
+        $(function () {
+           //入口函数的另一种写法*主流 
+           console.log('jquery的入口函数');
+        });
+
+        $(function () {
+        //1.什么是DOM对象(js对象 var a = get)
+        var cloth = document.getElementById('btn1');
+        //jq对象就是js对象的一个集合,伪数组,里面存放了一堆js对象(宏观上)
+        console.log($('div'));
+        });
+
+        /**
+         * $其实就是一个函数
+         * 3种用法
+         * 1.参数是一个function,入口函数
+         * 2.$(domObj) 把dom对象转换成jquery对象
+         * 入口函数的第一种写法就是用法2
+         * 3.$('div')$('btn')$('className')
+         * 用来找对象类似于querySelectorAll
+         * */
+    </script>
+</body>
+
+</html>

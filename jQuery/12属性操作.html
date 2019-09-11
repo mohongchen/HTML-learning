@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="images/01.jpg" alt="">
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // $(function () {
+        //     //attr(name,value) 用法和css一样
+        //     $('img').attr('alt', '图没了');
+        // })
+        $(function () {
+            //attr(name,value)
+            $('img').attr({
+                alt:'没了',
+                title:'enheng'
+            });
+            console.log($('img').attr('title'));
+            
+        })
+    </script>
+</body>
+
+</html>

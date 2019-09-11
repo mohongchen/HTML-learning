@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>衣服</li>
+        <li>裤子</li>
+        <li>裤衩子</li>
+        <li>袜子</li>
+        <li id="cloth">衣服</li>
+        <li>裤子</li>
+        <li class="green">裤衩子</li>
+        <li class="green">袜子</li>
+        <li>衣服</li>
+        <li>裤子</li>
+        <li>裤衩子</li>
+        <li>袜子</li>
+        <li>衣服</li>
+        <li>裤子</li>
+        <li>裤衩子</li>
+        <li>袜子</li>
+    </ul>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+
+        /**选择器
+         * 基本选择器： 标签    类  id选择器    交集    并集
+         * 层级选择器： 子代    后代
+         * 过滤选择器： :add奇数    :even偶数  :eq()指定下标
+         *             :first   :last   :gt :lt
+         * 筛选选择器(方法) children()儿子  find()后代  parent()父亲    
+         *                  siblings()兄弟  next()下一个兄弟  prev()上一个兄弟  eq()指定下标
+         * */
+        $(function () {
+            //jquery如何设置样式
+            // css(name,value)
+            $('#cloth').css('backgroundColor', '#f00');
+            $('.green').css('backgroundColor', '#0f0');
+            $('#cloth,.green').css('color', '#00f');
+            $('li.green').css('margin-top', '20px');
+
+            // $('s1,s2'); 并集选择器
+            // $('s1 s2'); 后代选择器
+            // $('s1>s2'); 子代选择器
+            // $('s1s2');  交集选择器
+
+            //下标为奇数
+            $('li:even');
+            //下标为偶数
+            $('li:odd');
+            //第一个
+            $('li:first');
+            //最后一个
+            $('li:last');
+            //下标为1
+            $('li:eq(1)');
+            //大于下标1的
+            $('li:gt(1)');
+            //小于下标1的
+            $('li:lt(1)');
+            //获取焦点时
+            $('li:focus');
+
+            //筛选选择器(方法)
+
+            //子类选择器
+            $('li').children();
+            //后代选择器
+            $('li').find();
+            //兄弟不包括自己
+            $('li').siblings();
+            //相当于筛选从index后的所有
+            $('li').eq(index);
+            //下一个兄弟
+            $('li').next();
+            //上一个兄弟
+            $('li').prev()
+
+        })
+    </script>
+</body>
+
+</html>

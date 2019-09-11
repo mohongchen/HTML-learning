@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: absolute;
+        }
+
+        div:nth-of-type(2) {
+            background-color: yellow;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="开始">
+    <input type="button" value="结束">
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $('input').eq(0).click(function () {
+                //第一个参数：对象
+                //第二个参数：时间
+                //第三个参数：效果
+                //第四个参数：回调
+                //慢快慢
+                $('div').eq(0).animate({
+                    left: 800,
+                }, 1000, 'swing');//默认
+                //匀速
+                $('div').eq(1).animate({
+                    left: 800,
+                }, 1000, 'linear',function () {
+                    console.log('回调函数');
+                });
+            })
+            $('input').eq(1).click(function () {
+                //stop：停止当前正在执行的动画
+                //第一个参数：是否清除动画队列 true false //默认true
+                //第二个参数：是否跳转当前动画的最终效果 true false 默认false
+                $('div').stop();
+            })
+        })
+    </script>
+</body>
+
+</html>
