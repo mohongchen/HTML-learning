@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            top: 250px;
+            position: absolute;
+
+        }
+        #dv1{
+            width: 200px;
+            height: 150px;
+            background-color: aqua;
+        }
+        #dv2{
+            width: 100px;
+            height: 50px;
+            background-color: tomato;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="dv1">
+        <div id="dv2"></div>
+    </div>
+
+    <input type="button" value="显示效果" id="btn">
+    <script src="common.js"></script>
+    <script>
+        my$('btn').onclick = function () {
+            //在style属性中设置的样式属性获取不到
+            //获取元素的宽和该应该用offset系列
+            console.log(my$('dv1').offsetWidth);
+            console.log(my$('dv1').offsetHeight);
+            console.log(my$('dv1').offsetTop);
+
+            /**没脱离文档流
+             * offsetLeft:父级元素的margin+父级元素的padding+父级元素的border+自身的margin
+             * 如果脱离文档流了
+             * 主要是自己的left和margin
+             * 
+             * 
+             * */
+            console.log(my$('dv1').offsetLeft);
+        }
+        
+    </script>
+</body>
+
+</html>

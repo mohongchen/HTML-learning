@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="text" cols="30" rows="10">
+        这个世界太疯狂，老鼠都给猫当伴娘，齐得隆起东墙。
+    </textarea>
+    <input type="button" value="请仔细阅读协议(5)" id="btn" disabled>
+
+    <script src="common.js"></script>
+    <script>
+        //常用的，反复的执行
+        var timeId = window.setInterval(function () {
+            alert('aa')
+        },1000);
+
+        window.clearInterval(timeId);
+
+        //这个函数是1秒后执行一次这个函数 
+        //虽然只执行一次函数，但是定时器还是在内存中存在
+        //所以还是要清理掉这个定时器
+        var timeid = window.setTimeout(function () {
+            
+        },1000)
+        clearTimeout(timeid);
+
+
+
+        var time = 5;
+        var timeId = setInterval(function () {
+            time--;
+            my$('btn').value = '请仔细阅读协议('+time+')';
+            if (time<=0) {
+                window.clearInterval(timeId);
+                my$('btn').disabled = false;
+                my$('btn').value = '同意';
+            }
+            
+        },1000);
+        
+    </script>
+</body>
+</html>

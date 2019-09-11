@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #dv {
+            position: relative;
+            margin: 0 auto;
+            margin-top: 50px;
+            height: 600px;
+            width: 500px;
+            border: 2px solid aqua;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dv">
+
+    </div>
+    <img src="images/bird.png" alt="" id="im">
+
+    <script src="common.js"></script>
+    <script>
+        
+        // console.log(my$('dv').offsetLeft);
+        // console.log(my$('dv').offsetWidth);
+        // console.log(my$('im').offsetHeight/2);
+        
+        
+        
+        my$('dv').onmouseover = function () {
+            my$('im').style.display = 'block';
+        }
+        my$('dv').onmouseout = function () {
+            my$('im').style.display = 'none';
+        }
+        var dv = my$('dv');
+        
+        dv.onmousemove = function (e) {
+            var minX = my$('dv').offsetLeft;
+            var minY = my$('dv').offsetTop;
+            var maxX = my$('dv').offsetWidth + my$('dv').offsetLeft - my$('im').offsetWidth;
+            var maxY = my$('dv').offsetHeight + my$('dv').offsetTop - my$('im').offsetHeight;
+            var x = e.clientX - my$('im').offsetWidth / 2;
+            var y = e.clientY - my$('im').offsetHeight / 2;
+
+            // console.log(x);
+            console.log(x,maxX);
+            
+            if (x < minX) {
+                my$('im').style.left = minX + 'px';
+            } else if (x > maxX) {
+                my$('im').style.left = maxX + 'px';
+            } else {
+                my$('im').style.left = x + 'px';
+            };
+            if (y < minY) {
+                my$('im').style.top = minY +'px';
+            } else if (y > maxY) {
+                my$('im').style.top = maxY + 'px';
+            } else {
+                my$('im').style.top = y + 'px';
+            };
+
+
+        }
+    </script>
+</body>
+
+</html>

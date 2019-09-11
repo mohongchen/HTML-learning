@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style>
+        div {
+            width: 600px;
+            height: 600px;
+            border: 2px solid yellow;
+            background-color: black;
+            position: relative;
+        }
+
+        span {
+            font-size: 30px;
+            color: yellow;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="亮起来" id="btn" />
+    <div id="dv"></div>
+    <script src="common.js"></script>
+
+    <script>
+        var timeId = ''
+        my$('btn').onclick = function () {
+            clearInterval(timeId)
+            timeId = setInterval(function () {
+                my$('dv').innerHTML = '<span>★</span>';
+                var rx = Math.floor(Math.random() * 600 + 1);
+                var ry = Math.floor(Math.random() * 600 + 1);
+                my$('dv').firstElementChild.style.top = rx + 'px';
+                my$('dv').firstElementChild.style.left = ry + 'px';
+            },100)
+
+        }
+    </script>
+
+</body>
+
+</html>

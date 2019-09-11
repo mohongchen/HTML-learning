@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #dv {
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dv">
+
+    </div>
+    <input type="button" value="长" id="btn">
+
+    <script src="common.js"></script>
+    <script>
+        var timeId = '';
+        my$('btn').onclick = function () {
+            var width = 300;
+            window.clearInterval(timeId);
+            timeId = window.setInterval(function () {
+                width = width+10;
+                my$('dv').style.width = width + 'px';
+                if (width >= 1500) {
+                    window.clearInterval(timeId);
+                }
+            }, 10);
+        }
+    </script>
+</body>
+
+</html>
