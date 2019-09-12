@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="生成" id="btn">
+    <div>
+        <ul>
+            <li>这是一个li1</li>
+            <li>这是一个li2</li>
+            <li>这是一个li3</li>
+            <li>这是一个li4</li>
+            <li>这是一个li5</li>
+            <li>这是一个li6</li>
+        </ul>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $('li').on('click', function () {
+                alert('嘿嘿嘿');
+            });
+            $('div').on('click', function () {
+            alert('欸嘿嘿');
+            });
+            $('div').on('click', 'li', function () {
+                alert('哈哈');
+            });
+            
+        })
+        //在点击li时先执行li本身的事件
+        //然后冒泡到div给li托管的事件
+        //最后到div本身的事件
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>我是一个p</p>
+    <p>我是一个p</p>
+    <p>我是一个p</p>
+    <p>我是一个p</p>
+    <p>我是一个p</p>
+    <input type="button" value="触发" id="btn">
+    <script src="jquery-1.12.4.js""></script>
+    <script>
+        $(function(){
+            $('p').on('click',function () {
+                alert($(this).text());
+            });
+            //off想移除谁就传谁，如果不传就所有事件都解除
+            $('p').off('click').on('click',function () {
+                alert('嘿嘿嘿')
+            });
+            // $('p').off();
+
+            //触发事件用trigger
+            $('#btn').on('click',function () {
+                // $('p').click();
+                $('p').trigger('click');
+            })
+        })
+    </script>
+</body>
+</html>

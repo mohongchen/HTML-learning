@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $('div').width(400);
+    $('div').height(500);
+    //width只能获取内容宽高
+    //innerWdith获取的是内容+padding
+    console.log($('div').innerWidth());
+    //outerWidth获取的是内容+padding+border
+    console.log($('div').outerWidth());
+    //参数是true时会加上margin
+    console.log($('div').outerWidth(true));
+    
+    //获取页面可视区域宽高
+    console.log($(window).width());
+    console.log($(window).height());
+    
+    $(window).resize(function () {
+        console.log($(window).width());
+        console.log($(window).height());
+    })
+
+</script>
+</body>
+
+</html>

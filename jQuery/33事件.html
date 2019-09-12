@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="生成" id="btn">
+    <div>
+        <ul>
+            <li>这是一个li1</li>
+            <li>这是一个li2</li>
+            <li>这是一个li3</li>
+            <li>这是一个li4</li>
+            <li>这是一个li5</li>
+            <li>这是一个li6</li>
+        </ul>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('<p>这是一个p</p>').appendTo($('div'));
+            });
+            //事件委托，给父元素绑定委托事件
+            //参数1 选择器 参数2 事件类型 事件3function
+            //动态创建的也会有事件
+            $('div').delegate('p,li', 'click', function () {
+                alert($(this).text());
+            });
+            
+        })
+    </script>
+</body>
+
+</html>

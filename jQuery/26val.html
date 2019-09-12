@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="嘿嘿" id="btn">
+    <input type="text" value="洋酒" id="txt">
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            //console.log($('#btn').val());
+            $('#btn').val('哈哈');
+            $('#txt').focus(function () {
+                if ($(this).val()==='洋酒') {
+                    $(this).val('');
+                }
+            }).blur(function () {//失去焦点 
+                if ($(this).val()==='') {
+                    $(this).val('洋酒');
+                }
+            });
+
+            $('txt').val('111');
+        })
+    </script>
+</body>
+</html>
