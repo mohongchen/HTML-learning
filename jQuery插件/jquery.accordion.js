@@ -1,5 +1,5 @@
 /**
- * Created by HUCC on 2017/4/12.
+ * 手风琴
  */
 $.fn.accordion = function (colors, width) {
   colors = colors || [];

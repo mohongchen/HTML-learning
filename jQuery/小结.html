@@ -65,6 +65,33 @@
          * 4.5克隆节点
          *      clone
          * 
+         * 5.特殊的属性操作
+         * val  值
+         * text 与 html     text不识别标签  html识别标签
+         * scrollTop 与 scorollLeft 可以设置值也可以获取值
+         * offset position(只读) offset()方法返回或设置匹配元素相对于文档的偏移
+         * 6.事件
+         * on('click' ,'function')  给自身绑定事件
+         * on('click','li',function)    委托事件
+         * 
+         * 不传值会清除所有事件 传值就值清除传值的事件类型
+         * off() off('click')
+         * 
+         * 事件触发
+         * click() trigger('click')
+         * 
+         * 阻止浏览器默认事件函数和阻止冒泡函数
+         * e.stopPropagation()
+         * e.preventDefault()
+         * 即会阻止浏览器的默认事件也会阻止冒泡 因为直接干掉了整个函数
+         * return false;
+         * 
+         * 7.补充
+         * 链式编程：end();
+         * 类似于forin 里面有个function(index,element)
+         * each
+         * 释放$ 解决冲突
+         * $.noConfilict();
          * */    
         
     </script>

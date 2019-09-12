@@ -1,5 +1,5 @@
 /**
- * Created by HUCC on 2017/4/12.
+ * 背景颜色
  */
 $.fn.bgColor = function (color) {
   //this是一个jq对象
