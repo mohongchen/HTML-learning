@@ -56,16 +56,42 @@
 
     <script src="jquery-1.12.4.js"></script>
     <script>
-        $(function () {
-            var $li = $('.wrap ul li');
-            $li.mouseenter(function () {
-                $(this).css('opacity',1).siblings().css('opacity','0.4')
+        // $(function () {
+        //     var $li = $('.wrap ul li');
+        //     $li.mouseenter(function () {
+        //         $(this).css('opacity', 1).siblings().css('opacity', '0.4')
+        //     });
+        //     $('.wrap').mouseleave(function () {
+        //         $(this).find('li').css('opacity', 1)
+        //     })
+        // })
+        // $(function () {
+        //     $('.wrap ul li').mouseenter(function () {
+        //         $(this).css('opacity', 1).siblings().css('opacity', 0.4);
+        //     });
+        //     $('.wrap ul li').mouseleave(function () {
+        //         $(this).css('opacity', 0.4);
+        //     })
+        //     $('.wrap').mouseleave(function () {
+        //         $(this).children().children().css('opacity', 1);
+        //     });
+        // });
+        // $(function () {
+        //     $('.wrap ul li').mouseenter(function () {
+        //         $(this).css('opacity', 1).siblings().css('opacity', 0.4);
+        //     });
+        //     $('.wrap').mouseleave(function () {
+        //         $(this).find('li').css('opacity', 1)
+        //     });
+        // });
+        $(function(){
+            $('.wrap ul li').mouseenter(function () { 
+                $(this).css('opacity', 1).siblings().css('opacity',0.4);
             });
-            $('.wrap').mouseleave(function () {
-                $(this).find('li').css('opacity',1) 
-            })
-        })
-    
+            $('.wrap').mouseleave(function () { 
+                $(this).find('li').css('opacity',1);
+            });
+        });
     </script>
 </body>
 

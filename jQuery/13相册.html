@@ -4,6 +4,17 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <script>
+        // $(function () {
+        //     $('#imagegallery a').click(function () {
+        //         var href = $(this).attr('href');
+        //         $('#image').attr('src', href);
+        //         var title = $(this).attr('title')
+        //         $('#des').text(title);
+        //         return false;
+        //     })
+        // })
+    </script>
     <style type="text/css">
         body {
             font-family: "Helvetica", "Arial", serif;
@@ -79,16 +90,13 @@
     <p id="des">选择一个图片</p>
     <script src="jquery-1.12.4.js"></script>
     <script>
-        $(function(){
-            $('#imagegallery a').click(function () {
-                var href = $(this).attr('href');
-                $('#image').attr('src',href);
-                var title = $(this).attr('title')
-                $('#des').text(title);
+        $(function () {
+            $('#imagegallery li a').on('click', function () {
+               var href = $(this).attr('href');
+                $('#image').attr('src',href).attr('title',$(this).attr('title')).attr('alt',$(this).children().attr('alt'));
                 return false;
             })
-        })
-    
+        });
     </script>
 </body>
 

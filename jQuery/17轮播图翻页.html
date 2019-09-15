@@ -4,6 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>京东商城</title>
+    <script>
+        // $(function () {
+        //     var count = 0;
+        //     $('.arrow .arrow-right').click(function () {
+        //         count++;
+        //         console.log(count);
+        //         if (count == $('.slider li').length) {
+        //             count = 0;
+        //         }
+        //         $('.slider li').eq(count).fadeIn().siblings().fadeOut();
+        //     })
+        //     $('.arrow .arrow-left').click(function () {
+        //         count--;
+        //         if (count == -1) {
+        //             count = $('.slider li').length - 1;
+        //         }
+        //         $('.slider li').eq(count).fadeIn().siblings().fadeOut();
+        //     })
+        // })
+    </script>
     <style>
         * {
             margin: 0;
@@ -96,22 +116,21 @@
     <script>
         $(function () {
             var count = 0;
-            $('.arrow .arrow-right').click(function () {
+            $('.arrow .arrow-right ').click(function () {
                 count++;
-                console.log(count);
-                if (count == $('.slider li').length) {
-                    count = 0;
+                $('.slider li').eq(count).stop().fadeIn().siblings().fadeOut();
+                if (count == $('.slider li').length - 1) {
+                    count = -1;
                 }
-                $('.slider li').eq(count).fadeIn().siblings().fadeOut();
             })
-            $('.arrow .arrow-left').click(function () {
+            $('.arrow .arrow-left ').click(function () {
                 count--;
                 if (count == -1) {
                     count = $('.slider li').length - 1;
                 }
-                $('.slider li').eq(count).fadeIn().siblings().fadeOut();
+                $('.slider li').eq(count).stop().fadeIn().siblings().fadeOut();
             })
-        })
+        });
     </script>
 
 

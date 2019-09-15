@@ -4,6 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+        // $(function () {
+        //     $(window).scroll(function () {
+        //         if ($(this).scrollTop() >= 1000) {
+        //             $('.actGotop').stop().fadeIn(1000);
+        //         } else {
+        //             $('.actGotop').stop().fadeOut(1000);
+        //         }
+        //     })
+        //     $('.actGotop').click(function () {
+        //         //window 的scroollTop()是一个方法不能赋值
+        //         //window 的pageYOffset是一个只读属性
+        //         //所以用html/body的scollTop的值
+        //         $("html,body").stop().animate({
+        //             scrollTop: 0
+        //         }, 2000)
+        //     })
+        // })
+    </script>
     <style>
         body {
             height: 8000px;
@@ -50,19 +69,32 @@
 
     <script src="jquery-1.12.4.js"></script>
     <script>
+        // $(function () {
+        //     $(window).scroll(function () {
+        //         if ($(this).scrollTop()>=1000) {
+        //             $('.actGotop').fadeIn(1000);
+        //         }else{
+        //             $('.actGotop').fadeOut(1000);
+        //         }
+        //     });
+        //     $('.actGotop').click(function () {
+        //         $('html,body').stop().animate({
+        //             scrollTop: 0
+        //         },2000)
+        //     })
+        // });
         $(function(){
             $(window).scroll(function () {
-                if ($(this).scrollTop()>=1000) {
-                    $('.actGotop').stop().fadeIn(1000);
-                }else {
-                    $('.actGotop').stop().fadeOut(1000);
+                if($(this).scrollTop() >= 1000){
+                    $('.actGotop').fadeIn(1000);
+                }else{
+                    $('.actGotop').fadeOut(1000);
                 }
-            })
+            });
             $('.actGotop').click(function () {
-                //window 的scroollTop()是一个方法不能赋值
-                //window 的pageYOffset是一个只读属性
-                //所以用html/body的scollTop的值
-                $("html,body").stop().animate({scrollTop:0},2000)
+                $('html,body').stop().animate({
+                    scrollTop:0
+                },2000)
             })
         })
     </script>

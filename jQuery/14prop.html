@@ -4,6 +4,22 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <script>
+        // $(function () {
+        //     $('#j_cbAll').click(function () {
+        //         $('#j_tb input').prop('checked', $('#j_cbAll').prop('checked'));
+        //     });
+        //     $('#j_tb input').click(function () {
+        //         var checkedLength = $('#j_tb input:checked').length;
+        //         var allCheckedLength = $('#j_tb input').length;
+        //         if (checkedLength == allCheckedLength) {
+        //             $('#j_cbAll').prop('checked', true);
+        //         } else {
+        //             $('#j_cbAll').prop('checked', false);
+        //         }
+        //     })
+        // });
+    </script>
     <style>
         * {
             padding: 0;
@@ -109,18 +125,16 @@
         // })
         $(function(){
             $('#j_cbAll').click(function () {
-                $('#j_tb input').prop('checked',$('#j_cbAll').prop('checked'));
+                $('#j_tb input').prop('checked',$(this).prop('checked'))
             });
-             $('#j_tb input').click(function () {
-                 var checkedLength = $('#j_tb input:checked').length;
-                 var allCheckedLength = $('#j_tb input').length;
-                 if (checkedLength == allCheckedLength) {
-                     $('#j_cbAll').prop('checked',true);
-                 }else{
+            $('#j_tb input').click(function () {
+                if ($('#j_tb input').length == $('#j_tb input:checked').length) {
+                    $('#j_cbAll').prop('checked',true);
+                }else{
                      $('#j_cbAll').prop('checked',false);
-                 }
-             })
-        });
+                }
+            })
+        })
     </script>
 </body>
 

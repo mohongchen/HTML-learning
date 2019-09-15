@@ -22,13 +22,13 @@
 
     <script src="jquery-1.12.4.js"></script>
     <script>
-        $(function(){
-            $('#ulList li').each(function (index,element) {
-                console.log(index);//index 是索引
-                console.log(element);//element是dom对象
-                $(element).css('opacity',(index+1)/10)
-            })
-        })
+        // $(function(){
+        //     $('#ulList li').each(function (index,element) {
+        //         console.log(index);//index 是索引
+        //         console.log(element);//element是dom对象
+        //         $(element).css('opacity',(index+1)/10)
+        //     })
+        // })
     </script>
 
 </head>
@@ -47,5 +47,11 @@
         <li>什么都看不见</li>
     </ul>
 </body>
-
+<script>
+$(function(){
+    $('#ulList li').each(function (index,element) {
+        $(element).css('opacity',(index+1)/10);
+    })
+})
+</script>
 </html>

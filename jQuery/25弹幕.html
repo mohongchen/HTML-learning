@@ -4,6 +4,32 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+    <script>
+        // $(function () {
+        //     var colors = ['red', 'green', 'hotpink', 'aqua'];
+        //     $('.btn').click(function () {
+        //         var ranColor = parseInt(Math.random() * colors.length);
+        //         var randomY = parseInt(Math.random() * 400);
+        //         $('<span></span>')
+        //             .text($('#text').val())
+        //             .css('color', colors[ranColor])
+        //             .css('left', '2000px')
+        //             .css('top', randomY)
+        //             .animate({
+        //                 left: -500
+        //             }, 10000, function () {
+        //                 $(this).remove;
+        //             })
+        //             .appendTo($('#boxDom'))
+        //         $('#text').val('');
+        //     })
+        //     $('#text').keyup(function (e) {
+        //         if (e.keyCode == 13) {
+        //             $('#btn').click();
+        //         }
+        //     })
+        // })
+    </script>
     <style type="text/css">
         html,
         body {
@@ -67,7 +93,7 @@
         }
 
         span {
-            width: 300px;
+            /* width: 300px; */
             height: 40px;
             position: absolute;
             overflow: hidden;
@@ -76,7 +102,7 @@
             line-height: 1.5em;
             cursor: pointer;
             white-space: nowrap;
-            
+
         }
     </style>
 </head>
@@ -92,30 +118,23 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 <script src="jquery-1.12.4.js"></script>
 <script>
-    $(function(){
-        var colors = ['red','green','hotpink','aqua'];
-        $('.btn').click(function () {
-            var ranColor = parseInt(Math.random()*colors.length);
-            var randomY = parseInt(Math.random()*400);
-            $('<span></span>')
-            .text($('#text').val())
-            .css('color',colors[ranColor])
-            .css('left','2000px')
-            .css('top',randomY)
-            .animate({left:-500},5000,function () {
-                $(this).remove;
-            })
-            .appendTo($('#boxDom'))
-            $('#text').val('');  
-        })
+    $(function () {
+        $('#boxDom #idDom .content #btn').on('click', function () {
+            $('<span></span>').text($('#text').val()).css('left',1600).animate({
+                left: -2000
+            }, 5000, function () {
+                $(this).remove();
+            }).appendTo($('#boxDom'));
+            $('#text').val('');
+        });
         $('#text').keyup(function (e) {
-            if(e.keyCode == 13){
-                $('#btn').click();
+            if (e.keyCode==13) {
+                $('#btn').click()
             }
         })
     })

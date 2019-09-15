@@ -4,6 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>五角星评分案例</title>
+    <script>
+        // $(function () {
+        //     // $('div').fadeIn(1000).delay(3000).fadeOut(1000);
+        //     var wjx_k = '☆';
+        //     var wjx_s = '★';
+
+        //     $('.comment li').on('mouseenter', function () {
+        //         $(this).text(wjx_s).prevAll().text(wjx_s);
+        //         $(this).nextAll().text(wjx_k);
+        //     });
+        //     $('.comment li').on('mouseleave', function () {
+        //         $(this).text(wjx_k).siblings().text(wjx_k);
+        //         //找到被点击的li 前面的变实心后面的变空心
+        //         $('li.current').text(wjx_s).prevAll().text(wjx_s);
+        //     });
+        //     $('.comment li').on('click', function () {
+        //         //给被点击的li加一个标记
+        //         $(this).addClass('current').siblings().removeClass('current');
+
+        //     });
+        // })
+    </script>
     <style>
         * {
             padding: 0;
@@ -24,29 +46,7 @@
             list-style: none;
         }
     </style>
-    <script src="jquery-1.12.4.js"></script>
-    <script>
-        $(function () {
-            // $('div').fadeIn(1000).delay(3000).fadeOut(1000);
-            var wjx_k = '☆';
-            var wjx_s = '★';
 
-            $('.comment li').on('mouseenter', function () {
-                $(this).text(wjx_s).prevAll().text(wjx_s);
-                $(this).nextAll().text(wjx_k);
-            });
-            $('.comment li').on('mouseleave', function () {
-                $(this).text(wjx_k).siblings().text(wjx_k);
-                //找到被点击的li 前面的变实心后面的变空心
-                $('li.current').text(wjx_s).prevAll().text(wjx_s);
-            });
-            $('.comment li').on('click', function () {
-                //给被点击的li加一个标记
-                $(this).addClass('current').siblings().removeClass('current');
-                
-            });
-        })
-    </script>
 
 
 </head>
@@ -60,5 +60,24 @@
         <li>☆</li>
     </ul>
 </body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var wjx_s = '★';
+        var wjx_k = '☆';
+        $('.comment li').mouseenter(function () {
+            $(this).text(wjx_s).prevAll().text(wjx_s);
+            $(this).nextAll().text(wjx_k);
+        });
+        $('.comment li').mouseleave(function () {
+            $('.current').text(wjx_s).prevAll().text(wjx_s);
+            $('.current').nextAll().text(wjx_k);
+        });
+        $('.comment li').click(function () {
+            $(this).removeClass('current').siblings().removeClass('current');
+            $(this).addClass('current');
+        })
+    })
+</script>
 
 </html>

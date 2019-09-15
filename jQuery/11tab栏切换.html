@@ -4,6 +4,15 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <script>
+        // $(function () {
+        //     $('.tab-item').mouseenter(function () {
+        //         $(this).addClass('active').siblings().removeClass('active');
+        //         var inx = $(this).index();
+        //         $('.main').eq(inx).addClass('selected').siblings().removeClass('selected');
+        //     })
+        // })
+    </script>
     <style type="text/css">
         * {
             margin: 0;
@@ -69,7 +78,7 @@
             border-bottom: 0;
         }
     </style>
-    
+
 
 </head>
 
@@ -101,14 +110,10 @@
         $(function(){
             $('.tab-item').mouseenter(function () {
                 $(this).addClass('active').siblings().removeClass('active');
-                var inx = $(this).index();
-                $('.main').eq(inx).addClass('selected').siblings().removeClass('selected');
+                var index = $(this).index();
+                $('.main').eq(index).addClass('selected').siblings().removeClass('selected');
             });
-            
-
-        })
-    
-    
+        });
     </script>
 </body>
 
